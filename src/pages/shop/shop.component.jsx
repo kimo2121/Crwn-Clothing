@@ -1,6 +1,6 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import CollectionsOverview from '../../components/collections-overview/collections-overview.component';
-import {Route} from 'react-router-dom';
 import CollectionPage from '../collection/collection.component';
 const ShopPage = ({match}) =>( 
    <div className='shop-page'>
@@ -9,6 +9,9 @@ const ShopPage = ({match}) =>(
    </div>
 );
 
+const mapDispatchToProps = dispatch => ({
+    fetchCollectionsStartAsync: () => dispatch(fetchCollectionsStartAsync())
+});
 
 export default ShopPage; 
        
